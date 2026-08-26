@@ -1,0 +1,23 @@
+{
+  "id": "sample-theme",
+  "name": "Sample Theme",
+  "version": "1.0.0",
+  "author": "Magic 8-Ball",
+  "description": "A minimal external theme used to validate the theme-pack architecture.",
+  "thumbnail": "visual/hero.webp",
+  "compatibility": {
+    "minAppVersion": "0.1.0"
+  },
+  "assets": {
+    "animation": {
+      "frame01HighRes": "animation/frame-01.webp",
+      "spriteSheet": "animation/shake.webp",
+      "frame25HighRes": "animation/frame-25.webp"
+    },
+    "visual": {
+      "backgroundPortrait": "visual/background-portrait.webp",
+      "backgroundLandscape": "visual/background-landscape.webp",
+      "hero": "visual/hero.webp"
+    }
+  }
+}

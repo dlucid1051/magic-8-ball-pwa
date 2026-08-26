@@ -74,3 +74,23 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+.theme-preview {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px, 1fr)
+  );
+}
+
+.theme-preview figure {
+  margin: 0;
+}
+
+.theme-preview img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
