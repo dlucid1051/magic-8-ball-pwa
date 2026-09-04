@@ -18,6 +18,8 @@ import {
   createThemeBackgroundResizeHandler,
 } from "./theme/ThemeBackgroundResizeHandler";
 
+import { QuestionInput } from './ui/QuestionInput';
+
 async function startApplication(): Promise<void> {
   const app =
     document.querySelector<HTMLDivElement>("#app");
@@ -75,6 +77,11 @@ async function startApplication(): Promise<void> {
             <h2 id="theme-assets-title">
               Theme Asset Preview
             </h2>
+  
+          <section aria-labelledby="question-section-title" class="question-section">
+            <h2 id="question-section-title" class="sr-only">Ask a Question</h2>
+            <div id="question-input-container"></div>
+          </section>
 
             <p>
               Current orientation:
@@ -118,6 +125,19 @@ async function startApplication(): Promise<void> {
         "Theme background image was not found."
       );
     }
+
+
+  const questionContainer = document.querySelector<HTMLElement>("#question-input-container");
+  if (questionContainer) {
+    const questionInput = new QuestionInput({
+      id: 'user-question',
+      label: 'Your Question',
+      placeholder: 'Type, ask, or concentrate on a question...',
+      initialValue: '',
+    });
+    questionContainer.appendChild(questionInput.getElement());
+  }
+
 
     const orientationElement =
       document.querySelector<HTMLElement>(
